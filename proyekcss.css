@@ -1,0 +1,66 @@
+#scoreValue {
+  font-weight: bold; /* Menambahkan tebal pada tulisan skor */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media.discordapp.net/attachments/1108066963810431047/1143175115027271702/20230821_202932.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Membuat latar belakang tetap saat menggulir */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh; /* Mengisi tinggi seluruh jendela tampilan (viewport) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CSS styling untuk elemen game dan poin */
+#game-container {
+  text-align: center;
+  position: relative; /* Memungkinkan penempatan poin yang tepat */
+}
+
+#gameImage {
+  width: 250px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto; /* Mengikuti proporsi asli gambar */
+  cursor: pointer;
+}
+
+.score {
+  font-weight: bold; /* Teks poin menjadi bold */
+  font-size: 24px; /* Ukuran teks poin sesuaikan dengan preferensi Anda */
+  position: absolute; /* Menentukan posisi absolut */
+  top: 0; /* Menempatkan teks di bagian atas */
+  left: 0; /* Menempatkan teks di bagian kiri */
+  right: 0; /* Menempatkan teks di bagian kanan */
+  bottom: 0; /* Menempatkan teks di bagian bawah */
+  margin: auto; /* Membuat teks berada di tengah */
+}
+
+.score.increase {
+  animation: shake 0.5s ease-in-out; /* Animasi getar selama 0.5 detik saat bertambah */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
